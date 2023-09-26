@@ -1,0 +1,321 @@
+syntax = "proto2";
+
+package apollo.canbus;
+
+message Veh_fb_diag_98c4eaef {
+// Report Message
+  // [] [0|0]
+  optional bool veh_fb_drvmcudisctrl = 1;
+  // [] [0|0]
+  optional bool veh_fb_ehboilfault = 2;
+  // [] [0|0]
+  optional bool veh_fb_ehboilpresssensorfault = 3;
+  // [] [0|0]
+  optional bool veh_fb_ehbmotorfault = 4;
+  // [] [0|0]
+  optional bool veh_fb_ehbsensorabnomal = 5;
+  // [] [0|0]
+  optional bool veh_fb_ehbpowerfault = 6;
+  // [] [0|0]
+  optional bool veh_fb_ehbot = 7;
+  // [] [0|0]
+  optional bool veh_fb_ehbangulefault = 8;
+  // [] [0|0]
+  optional bool veh_fb_ehbdisen = 9;
+  // [] [0|0]
+  optional bool veh_fb_ehbworkmodelfault = 10;
+  // [] [0|0]
+  optional bool veh_fb_epsovercurrent = 11;
+  // [] [0|0]
+  optional bool veh_fb_epsdiswork = 12;
+  // [] [0|0]
+  optional bool veh_fb_epswarning = 13;
+  // [] [0|0]
+  optional bool veh_fb_auxremotedisonline = 14;
+  // [] [0|0]
+  optional bool veh_fb_auxremoteclose = 15;
+  // [] [0|0]
+  optional bool veh_fb_auxbmsdisonline = 16;
+  // [] [0|0]
+  optional bool veh_fb_drvmcudisonline = 17;
+  // [] [0|0]
+  optional bool veh_fb_autoiocancmd = 18;
+  // [] [0|0]
+  optional bool veh_fb_autocanctrlcmd = 19;
+  // [] [0|0]
+  optional int32 veh_fb_infor_check_bcc = 20;
+  // [] [0|0]
+  optional int32 veh_fb_infor_alive_cnt = 21;
+  // [] [0|0]
+  optional bool veh_fb_auxscram = 22;
+  // [] [0|0]
+  optional bool veh_fb_drvmcumosfef = 23;
+  // [] [0|0]
+  optional bool veh_fb_drvmcuhall = 24;
+  // [] [0|0]
+  optional bool veh_fb_drvmcuscram = 25;
+  // [] [0|0]
+  optional bool veh_fb_drvmcushort = 26;
+  // [] [0|0]
+  optional bool veh_fb_drvmcuuv = 27;
+  // [] [0|0]
+  optional bool veh_fb_drvmcuov = 28;
+  // [] [0|0]
+  optional bool veh_fb_drvmcuot = 29;
+  // [] [0|0]
+  optional bool veh_fb_ehbdisonline = 30;
+  // [] [0|0]
+  optional bool veh_fb_ehbecufault = 31;
+  // [] [0|0]
+  optional bool veh_fb_epsmosfetot = 32;
+  // [] [0|0]
+  optional bool veh_fb_epsfault = 33;
+  // [] [0|0]
+  optional bool veh_fb_epsdisonline = 34;
+  // [] [0|0]
+  optional int32 veh_fb_faultlevel = 35;
+}
+
+message Sensor_reset_98ffffff {
+// Control Message
+  // [] [-1|0]
+  optional bool close_candiag = 1;
+  // [] [0|0]
+  optional bool brake_reset = 2;
+  // [] [0|0]
+  optional bool steer_reset = 3;
+}
+
+message Io_cmd_98c4d7d0 {
+// Control Message
+  // [] [0|0]
+  optional bool io_cmd_discharge = 1;
+  // [] [0|0]
+  optional int32 io_cmd_check_bcc = 2;
+  // [] [0|0]
+  optional int32 io_cmd_alive_cnt = 3;
+  // [] [0|0]
+  optional bool io_cmd_speaker = 4;
+  // [] [0|0]
+  optional bool io_cmd_fog_lamp = 5;
+  // [] [0|0]
+  optional bool io_cmd_clearance_lamp = 6;
+  // [] [0|0]
+  optional bool io_cmd_braking_lamp = 7;
+  // [] [0|0]
+  optional int32 io_cmd_turn_lamp = 8;
+  // [] [0|0]
+  optional bool io_cmd_upper_beam_headlamp = 9;
+  // [] [0|0]
+  optional bool io_cmd_lower_beam_headlamp = 10;
+  // [] [0|0]
+  optional bool io_cmd_enable = 11;
+}
+
+message Io_fb_98c4daef {
+// Report Message
+  // [] [0|0]
+  optional bool io_fb_chargeen = 1;
+  // [] [0|0]
+  optional bool io_fb_dischargeflg = 2;
+  // [] [0|0]
+  optional int32 io_fb_check_bcc = 3;
+  // [] [0|0]
+  optional int32 io_fb_alive_cnt = 4;
+  // [] [0|0]
+  optional bool io_fb_rr_drop_sensor = 5;
+  // [] [0|0]
+  optional bool io_fb_rm_drop_sensor = 6;
+  // [] [0|0]
+  optional bool io_fb_rl_drop_sensor = 7;
+  // [] [0|0]
+  optional bool io_fb_fr_drop_sensor = 8;
+  // [] [0|0]
+  optional bool io_fb_fm_drop_sensor = 9;
+  // [] [0|0]
+  optional bool io_fb_fl_drop_sensor = 10;
+  // [] [0|0]
+  optional bool io_fb_rr_impact_sensor = 11;
+  // [] [0|0]
+  optional bool io_fb_rm_impact_sensor = 12;
+  // [] [0|0]
+  optional bool io_fb_rl_impact_sensor = 13;
+  // [] [0|0]
+  optional bool io_fb_fr_impact_sensor = 14;
+  // [] [0|0]
+  optional bool io_fb_fm_impact_sensor = 15;
+  // [] [0|0]
+  optional bool io_fb_fl_impact_sensor = 16;
+  // [] [0|0]
+  optional bool io_fb_speaker = 17;
+  // [] [0|0]
+  optional bool io_fb_fog_lamp = 18;
+  // [] [0|0]
+  optional bool io_fb_clearance_lamp = 19;
+  // [] [0|0]
+  optional bool io_fb_braking_lamp = 20;
+  // [] [0|0]
+  optional int32 io_fb_turn_lamp = 21;
+  // [] [0|0]
+  optional bool io_fb_upper_beam_headlamp = 22;
+  // [] [0|0]
+  optional bool io_fb_lower_beam_headlamp = 23;
+  // [] [0|0]
+  optional bool io_fb_enable = 24;
+}
+
+message Rr_wheel_fb_98c4d8ef {
+// Report Message
+  // [] [0|0]
+  optional double rr_wheel_fb_velocity = 1;
+  // [] [0|0]
+  optional int32 rr_wheel_fb_pulse = 2;
+  // [] [0|0]
+  optional int32 rr_wheel_fb_check_bcc = 3;
+  // [] [0|0]
+  optional int32 rr_wheel_fb_alive_cnt = 4;
+}
+
+message Ctrl_fb_98c4d2ef {
+// Report Message
+  // [] [0|0]
+  optional int32 ctrl_fb_check_bcc = 1;
+  // [] [0|0]
+  optional int32 ctrl_fb_alive_cnt = 2;
+  // [] [0|0]
+  optional int32 ctrl_fb_mode = 3;
+  // [] [0|0]
+  optional int32 ctrl_fb_brake = 4;
+  // [] [0|0]
+  optional double ctrl_fb_steering = 5;
+  // [] [0|0]
+  optional double ctrl_fb_velocity = 6;
+  // [] [0|0]
+  optional int32 ctrl_fb_gear = 7;
+}
+
+message Ctrl_cmd_98c4d2d0 {
+// Control Message
+  // [] [0|0]
+  optional int32 ctrl_cmd_check_bcc = 1;
+  // [] [0|0]
+  optional int32 ctrl_cmd_alive_cnt = 2;
+  // [] [0|127]
+  optional int32 ctrl_cmd_brake = 3;
+  // [] [0|0]
+  optional double ctrl_cmd_steering = 4;
+  // [] [0|0]
+  optional double ctrl_cmd_velocity = 5;
+  // [] [0|0]
+  optional int32 ctrl_cmd_gear = 6;
+}
+
+message Bms_infor_98c4e1ef {
+// Report Message
+  // [] [0|0]
+  optional int32 bms_infor_check_bcc = 1;
+  // [] [0|0]
+  optional int32 bms_infor_alive_cnt = 2;
+  // [] [0|0]
+  optional double bms_infor_remaining_capacity = 3;
+  // [] [0|0]
+  optional double bms_infor_current = 4;
+  // [] [0|0]
+  optional double bms_infor_voltage = 5;
+}
+
+message Odo_fb_98c4deef {
+// Report Message
+  // [] [0|0]
+  optional double odo_fb_accumulative_angular = 1;
+  // [] [0|0]
+  optional double odo_fb_accumulative_mileage = 2;
+}
+
+message Lr_wheel_fb_98c4d7ef {
+// Report Message
+  // [] [0|0]
+  optional int32 lr_wheel_fb_check_bcc = 1;
+  // [] [0|0]
+  optional int32 lr_wheel_fb_alive_cnt = 2;
+  // [] [0|0]
+  optional int32 lr_wheel_fb_pulse = 3;
+  // [] [0|0]
+  optional double lr_wheel_fb_velocity = 4;
+}
+
+message Drive_fb_mcuecoder_98c4dcef {
+// Report Message
+  // [] [0|0]
+  optional int32 drive_fb_mcuecoder_check_bcc = 1;
+  // [] [0|0]
+  optional int32 drive_fb_mcuecoder_alive_cnt = 2;
+  // [] [0|0]
+  optional int32 drive_fb_mcuecoder = 3;
+}
+
+message Error_70f {
+// Report Message
+  // [] [0|0]
+  optional int32 error = 1;
+}
+
+message Bms_flag_infor_98c4e2ef {
+// Report Message
+  // [] [0|0]
+  optional int32 bms_flag_infor_check_bcc = 1;
+  // [] [0|0]
+  optional int32 bms_flag_infor_alive_cnt = 2;
+  // [] [0|0]
+  optional int32 reserved = 3;
+  // [] [0|0]
+  optional double bms_flag_infor_low_temperature = 4;
+  // [] [0|0]
+  optional double bms_flag_infor_hight_temperature = 5;
+  // [] [0|0]
+  optional bool bms_flag_infor_charge_flag = 6;
+  // [] [0|0]
+  optional bool bms_flag_infor_lock_mos = 7;
+  // [] [0|0]
+  optional bool bms_flag_infor_ic_error = 8;
+  // [] [0|0]
+  optional bool bms_flag_infor_short = 9;
+  // [] [0|0]
+  optional bool bms_flag_infor_discharge_oc = 10;
+  // [] [0|0]
+  optional bool bms_flag_infor_charge_oc = 11;
+  // [] [0|0]
+  optional bool bms_flag_infor_discharge_ut = 12;
+  // [] [0|0]
+  optional bool bms_flag_infor_discharge_ot = 13;
+  // [] [0|0]
+  optional bool bms_flag_infor_charge_ut = 14;
+  // [] [0|0]
+  optional bool bms_flag_infor_charge_ot = 15;
+  // [] [0|0]
+  optional bool bms_flag_infor_uv = 16;
+  // [] [0|0]
+  optional bool bms_flag_infor_ov = 17;
+  // [] [0|0]
+  optional bool bms_flag_infor_single_uv = 18;
+  // [] [0|0]
+  optional bool bms_flag_infor_single_ov = 19;
+  // [] [0|0]
+  optional int32 bms_flag_infor_soc = 20;
+}
+
+message Fr {
+  optional Veh_fb_diag_98c4eaef veh_fb_diag_98c4eaef = 1; // report message
+  optional Sensor_reset_98ffffff sensor_reset_98ffffff = 2; // control message
+  optional Io_cmd_98c4d7d0 io_cmd_98c4d7d0 = 3; // control message
+  optional Io_fb_98c4daef io_fb_98c4daef = 4; // report message
+  optional Rr_wheel_fb_98c4d8ef rr_wheel_fb_98c4d8ef = 5; // report message
+  optional Ctrl_fb_98c4d2ef ctrl_fb_98c4d2ef = 6; // report message
+  optional Ctrl_cmd_98c4d2d0 ctrl_cmd_98c4d2d0 = 7; // control message
+  optional Bms_infor_98c4e1ef bms_infor_98c4e1ef = 8; // report message
+  optional Odo_fb_98c4deef odo_fb_98c4deef = 9; // report message
+  optional Lr_wheel_fb_98c4d7ef lr_wheel_fb_98c4d7ef = 10; // report message
+  optional Drive_fb_mcuecoder_98c4dcef drive_fb_mcuecoder_98c4dcef = 11; // report message
+  optional Error_70f error_70f = 12; // report message
+  optional Bms_flag_infor_98c4e2ef bms_flag_infor_98c4e2ef = 13; // report message
+}

@@ -1,0 +1,54 @@
+data {
+  format: NEWTONM2_BINARY
+  serial {
+    device: "/dev/ttyACM0"
+    baud_rate: 115200
+  }
+}
+command {
+  format: NEWTONM2_BINARY
+  serial {
+    device: "/dev/m2setting"
+    baud_rate: 115200
+  }
+}
+login_commands: "$cmd,output,usb0,rawimub,0.010*ff\r\n"
+login_commands: "$cmd,output,usb0,inspvab,0.010*ff\r\n"
+login_commands: "$cmd,through,usb0,bestposb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,rangeb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,gpsephemb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,gloephemerisb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,bdsephemerisb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,headingb,1.000*ff\r\n"
+login_commands: "$cmd,set,navmode,FineAlign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,coarsealign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,dynamicalign,on*ff\r\n"
+login_commands: "$cmd,set,navmode,gnss,double*ff\r\n"
+login_commands: "$cmd,set,navmode,carmode,on*ff\r\n"
+login_commands: "$cmd,set,navmode,zupt,on*ff\r\n"
+login_commands: "$cmd,set,navmode,firmwareindex,0*ff\r\n"
+login_commands: "$cmd,set,coordinate,x,y,z*ff\r\n"
+login_commands: "$cmd,set,navmode,FineAlign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,coarsealign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,dynamicalign,on*ff\r\n"
+login_commands: "$cmd,set,navmode,gnss,double*ff\r\n"
+login_commands: "$cmd,set,navmode,carmode,on*ff\r\n"
+login_commands: "$cmd,set,navmode,zupt,on*ff\r\n"
+login_commands: "$cmd,set,navmode,firmwareindex,0*ff\r\n"
+login_commands: "$cmd,set,ntrip,enable,enable*ff\r\n"
+login_commands: "$cmd,set,netipport,203,107,45,154,8002*ff\n"
+login_commands: "$cmd,set,mountpoint,RTCM32_GGB*ff\n"
+login_commands: "$cmd,set,netuser,qxvswp002388:2bdaa54*ff\n"
+login_commands: "$cmd,set,localip,192,168,1,106*ff\n"
+login_commands: "$cmd,set,localmask,255,255,255,0*ff\n"
+login_commands: "$cmd,set,localgate,192,168,1,1*ff\n"
+login_commands: "$cmd,set,headoffset,0*ff\n"
+login_commands: "$cmd,set,leverarm,gnss,0,-0.55,0.5*ff\n"
+login_commands: "$cmd,save,config*ff\n"
+rtk_solution_type: RTK_RECEIVER_SOLUTION
+imu_type: CPT_XW5651
+proj4_text: "+proj=utm +zone=50 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+tf {
+  frame_id: "world"
+  child_frame_id: "novatel"
+}

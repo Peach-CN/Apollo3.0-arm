@@ -1,0 +1,62 @@
+package(default_visibility = ["//visibility:public"])
+
+licenses(["notice"])
+
+
+
+cc_library(
+    name = "cuda",
+    includes = [
+	"include",
+    ],
+    copts = [
+	"-I/usr/local/cuda/targets/aarch64-linux/include",
+	"-I/usr/local/cuda/extras/CUPTI/include",
+	"-I/usr/local/cuda/targets/aarch64-linux/include",
+	"-I/usr/local/cuda/nvvm/include",
+    ],
+    linkopts = [
+        "-Xlinker -rpath-link=/usr/lib/aarch64-linux-gnu/tegra",
+        "-Xlinker -rpath-link=/usr/lib/aarch64-linux-gnu/tegra-egl",
+        "-Xlinker -rpath-link=/usr/lib/aarch64-linux-gnu",
+        "-L/usr/local/cuda/targets/aarch64-linux/lib/stubs/",
+	"-L/usr/lib/aarch64-linux-gnu/",
+        "-L/usr/local/cuda/targets/x86_64-linux/lib/stubs/",
+	"-L/usr/lib/x86_64-linux-gnu/",
+        "-L/usr/lib/aarch64-linux-gnu/tegra",
+        "-L/usr/lib/aarch64-linux-gnu/tegra-egl",
+        "-lgomp",
+        "-L/usr/local/cuda/lib64",
+        "-lOpenCL",
+        "-lcublas",
+        "-lcudart",
+        "-lcudnn",
+        "-lcufft",
+        "-lcufftw",
+        "-lcuinj64",
+        "-lcurand",
+        "-lcusolver",
+        "-lcusparse",
+        "-lnppc",
+        "-lnppial",
+        "-lnppicc",
+        "-lnppicom",
+        "-lnppidei",
+        "-lnppif",
+        "-lnppig",
+        "-lnppim",
+        "-lnppist",
+        "-lnppisu",
+        "-lnppitc",
+        "-lnpps",
+        "-lnvToolsExt",
+        "-lnvblas",
+        "-lnvgraph",
+        "-lnvrtc-builtins",
+        "-lnvrtc",
+        "-L/usr/local/cuda/lib64/stubs",
+        "-lcuda",
+        "-lnvidia-ml",
+        "-lnvrtc",
+    ],
+)

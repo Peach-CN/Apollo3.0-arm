@@ -1,0 +1,1 @@
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{product}=="Marvelmind Robotics Dashboard device", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", MODE="0777", SYMLINK+="gps", OWNER="nvidia", GROUP="nvidia"

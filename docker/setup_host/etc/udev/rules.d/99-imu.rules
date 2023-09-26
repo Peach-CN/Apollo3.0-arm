@@ -1,0 +1,5 @@
+#KERNELS=="1-4.3*", SUBSYSTEM=="tty", SUBSYSTEMS=="usb-serial", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0777", SYMLINK+="imu", OWNER="nvidia", GROUP="nvidia"
+#KERNEL=="ttyUSB0", SUBSYSTEM=="tty", SUBSYSTEMS=="usb-serial", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0777", SYMLINK+="imu", OWNER="nvidia", GROUP="nvidia"
+#ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="0001", MODE:="666", SYMLINK+="imu"
+KERNEL=="ttyUSB0", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE:="0666", SYMLINK+="imu"
+#KERNEL=="ttyUSB[0-9]*", MODE="0666"

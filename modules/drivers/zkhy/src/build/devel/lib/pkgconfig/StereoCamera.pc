@@ -1,0 +1,8 @@
+prefix=/apollo/modules/drivers/zkhy/src/build/devel
+
+Name: StereoCamera
+Description: Description of StereoCamera
+Version: 2.6.0
+Cflags: 
+Libs: -L/apollo/modules/drivers/zkhy/src/build/devel/lib 
+Requires: 

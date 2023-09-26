@@ -1,0 +1,52 @@
+data {
+  format: ZHD_BINARY
+  serial {
+    device: "/dev/rs232"
+    baud_rate: 230400
+  }
+}
+rtk_from {
+  format: RTCM_V3
+  ntrip {
+    address: "120.253.226.97"
+    port: 8002
+    mount_point: "RTCM33_GRCE"
+    user: "abxj210511"
+    password: "4pm3kkdf"
+    timeout_s: 5
+  }
+  push_location: true
+}
+rtk_to {
+  serial {
+    device: "/dev/rs485"
+    baud_rate: 115200
+  }
+}
+login_commands: "$HSET,ALL,OFF\r\n"
+login_commands: "$HSET,GINS,BIN,A,ON,0.01\r\n"
+login_commands: "$HSET,IMU,BIN,A,ON,0.01\r\n"
+login_commands: "$HSET,STA,BIN,A,ON,1\r\n"
+login_commands: "$HSET,GGA,MSG,A,ON,0.2\r\n"
+login_commands: "$HSET,CFG,SAVE\r\n"
+login_commands: "$HLOG,VER\r\n"
+login_commands: "$HLOG,LEVER,CFG\r\n"
+login_commands: "$HLOG,COM,INFO\r\n"
+login_commands: "$HSET,LEVER1,-0.57,-0.035,-0.57\r\n"
+login_commands: "$HSET,LEVER2,0.31,-0.035,-0.57\r\n"
+rtk_solution_type: RTK_RECEIVER_SOLUTION
+imu_type: ADIS16488
+proj4_text: "+proj=utm +zone=50 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+tf {
+  frame_id: "world"
+  child_frame_id: "novatel"
+}
+zhd_config {
+  angle_heading: 90
+}
+zhd_postype_enable: false
+gnss_offset {
+  x: 0.311
+  y: 0.05
+  z: 0
+}

@@ -1,0 +1,75 @@
+data {
+    format: NEWTONM2_BINARY
+    serial {
+        device: "/dev/ttyACM0"
+        baud_rate: 115200
+    }
+}
+
+#rtk_from {
+#    format: RTCM_V3
+#    ntrip {
+#        address: ""
+#        port: 8000
+#        mount_point: ""
+#        user: ""
+#        password: ""
+#        timeout_s: 5
+#    }
+#    push_location: true
+#}
+
+#rtk_to {
+#    format: NEWTONM2_BINARY
+#    serial {
+#        device: "/dev/ttyACM0"
+#        baud_rate: 115200
+#    }
+#}
+
+command {
+    format: NEWTONM2_BINARY
+    serial {
+        device: "/dev/m2setting"
+        baud_rate: 115200
+    }
+}
+
+rtk_solution_type: RTK_RECEIVER_SOLUTION
+imu_type: CPT_XW5651
+proj4_text: "+proj=utm +zone=50 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+
+tf {
+    frame_id: "world"
+    child_frame_id: "novatel"
+}
+
+# If given, the driver will send velocity info into novatel one time per second
+
+login_commands: "$cmd,output,usb0,rawimub,0.010*ff\r\n"
+login_commands: "$cmd,output,usb0,inspvab,0.010*ff\r\n"
+login_commands: "$cmd,through,usb0,bestposb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,rangeb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,gpsephemb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,gloephemerisb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,bdsephemerisb,1.000*ff\r\n"
+login_commands: "$cmd,through,usb0,headingb,1.000*ff\r\n"
+login_commands: "$cmd,set,navmode,FineAlign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,coarsealign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,dynamicalign,on*ff\r\n"
+login_commands: "$cmd,set,navmode,gnss,double*ff\r\n"
+login_commands: "$cmd,set,navmode,carmode,on*ff\r\n"
+login_commands: "$cmd,set,navmode,zupt,on*ff\r\n"
+login_commands: "$cmd,set,navmode,firmwareindex,0*ff\r\n"
+
+login_commands: "$cmd,set,coordinate,x,y,z*ff\r\n"
+
+login_commands: "$cmd,set,navmode,FineAlign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,coarsealign,off*ff\r\n"
+login_commands: "$cmd,set,navmode,dynamicalign,on*ff\r\n"
+login_commands: "$cmd,set,navmode,gnss,double*ff\r\n"
+login_commands: "$cmd,set,navmode,carmode,on*ff\r\n"
+login_commands: "$cmd,set,navmode,zupt,on*ff\r\n"
+login_commands: "$cmd,set,navmode,firmwareindex,0*ff\r\n"
+
+login_commands: "$cmd,save,config*ff\r\n"

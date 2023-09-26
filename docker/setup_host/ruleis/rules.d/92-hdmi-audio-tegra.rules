@@ -1,0 +1,10 @@
+SUBSYSTEM!="switch", GOTO="hdmi_end"
+KERNEL!="hdmi_audio", GOTO="hdmi_end"
+
+ATTRS{state}=="1", RUN+="/bin/ln -sf /etc/pulse/default.pa.hdmi /etc/pulse/default.pa"
+ATTRS{state}=="0", RUN+="/bin/ln -sf /etc/pulse/default.pa.orig /etc/pulse/default.pa"
+
+ATTRS{state}=="1", RUN+="/bin/ln -sf /etc/asound.conf.tegrahda /etc/asound.conf"
+ATTRS{state}=="0", RUN+="/bin/ln -sf /etc/asound.conf.tegrasndt186ref /etc/asound.conf"
+
+LABEL="hdmi_end"

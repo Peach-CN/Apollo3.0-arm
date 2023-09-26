@@ -1,0 +1,3 @@
+#KERNELS=="1-4.4.3*", SUBSYSTEM=="tty", SUBSYSTEMS=="usb-serial", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", ATTRS{devnum}=="6", MODE="0777", SYMLINK+="ultrasonic", OWNER="nvidia", GROUP="nvidia"
+#KERNEL=="ttyUSB1", SUBSYSTEM=="tty", SUBSYSTEMS=="usb-serial", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0777", SYMLINK+="ultrasonic", OWNER="nvidia", GROUP="nvidia"
+KERNEL=="ttyUSB1", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE:="0666", SYMLINK+="ultrasonic"

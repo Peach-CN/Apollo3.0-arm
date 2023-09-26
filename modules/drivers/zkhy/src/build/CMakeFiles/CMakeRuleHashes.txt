@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+c366aa3688fc9051ada19ed19922a376 StereoCamera/CMakeFiles/clean_test_results

@@ -1,0 +1,17 @@
+header {
+    timestamp_sec: 1173545118.51
+    module_name: "routing"
+    sequence_num: 1
+}
+waypoint {
+    pose {
+        x: 222698.11
+        y: 2511755.72
+    }
+}
+waypoint {
+    pose {
+        x: 222703.36
+        y: 2511736.11
+    }
+}

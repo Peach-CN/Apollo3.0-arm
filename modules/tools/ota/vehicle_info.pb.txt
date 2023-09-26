@@ -1,0 +1,6 @@
+name : "MicroCar"
+brand : AGILEX
+model : AGILEX
+license {
+    vin : "<VIN>"
+}

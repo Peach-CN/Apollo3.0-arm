@@ -1,0 +1,40 @@
+config {
+  direction: FRONT_LEFT
+  index: 8
+  distance: 100
+}
+config {
+  direction: FRONT_RIGHT
+  index: 1
+  distance: 100
+}
+config {
+  direction: LEFT_FRONT
+  index: 11
+  distance: 30
+}
+config {
+  direction: LEFT_REAR
+  index: 10
+  distance: 30
+}
+config {
+  direction: RIGHT_FRONT
+  index: 2
+  distance: 30
+}
+config {
+  direction: RIGHT_REAR
+  index: 0
+  distance: 30
+}
+config {
+  direction: REAR_LEFT
+  index: 4
+  distance: 0
+}
+config {
+  direction: REAR_RIGHT
+  index: 5
+  distance: 0
+}

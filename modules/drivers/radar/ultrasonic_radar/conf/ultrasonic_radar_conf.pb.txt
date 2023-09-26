@@ -1,0 +1,17 @@
+can_conf {
+  can_card_parameter {
+    brand: SOCKET_CAN_RAW
+    type: PCI_CARD
+    channel_id: CHANNEL_ID_ZERO
+  }
+
+  enable_debug_mode: false
+  enable_receiver_log: false
+}
+
+#serial_conf {
+#  device: "/dev/ttyUSB1"
+#  baud_rate: 9600
+#}
+
+entrance_num: 12

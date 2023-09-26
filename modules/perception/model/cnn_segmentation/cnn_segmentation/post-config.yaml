@@ -1,0 +1,18 @@
+Clustering3D:
+  gap: 0.5
+Mst:
+  width: 480
+  height: 480
+  resolution: 0.3
+  neighbor: 2
+  c: 8
+  move: 0.9
+Clustering2D:
+  method: cc
+  contribute: 0.33
+  seed: 0.3
+  obj: 0.5
+  diff: 0.24
+  cc2center: 12
+  center2center: 3
+  neighbor: 8

@@ -1,0 +1,15 @@
+data {
+  format: NEWTONM2_BINARY
+  serial {
+    device: "/dev/m2setting"
+    baud_rate: 230400
+  }
+}
+
+rtk_solution_type: RTK_RECEIVER_SOLUTION
+imu_type: CPT_XW5651
+proj4_text: "+proj=utm +zone=50 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
+tf {
+  frame_id: "world"
+  child_frame_id: "novatel"
+}

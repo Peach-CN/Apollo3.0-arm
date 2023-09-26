@@ -1,0 +1,9 @@
+SUBSYSTEM!="sound", GOTO="sound_end"
+KERNEL!="card*", GOTO="sound_end"
+
+ATTRS{id}=="tegrasndt186ref", ACTION=="add", RUN+="/bin/rm /var/lib/alsa/asound.state"
+ATTRS{id}=="tegrasndt186ref", ACTION=="add", RUN+="/etc/amixer_settings"
+ATTRS{id}=="tegrasndt186ref", ACTION=="add", RUN+="/bin/ln -sf /etc/asound.conf.tegrasndt186ref /etc/asound.conf"
+ATTRS{id}=="tegrahda", ACTION=="add", RUN+="/bin/ln -sf /etc/asound.conf.tegrahda /etc/asound.conf"
+
+LABEL="sound_end"

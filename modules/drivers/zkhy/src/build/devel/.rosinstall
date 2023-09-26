@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /apollo/modules/drivers/zkhy/src/build/devel/setup.sh

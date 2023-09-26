@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="23a3", MODE="0777", SYMLINK+="m2setting", OWNER="nvidia", GROUP="nvidia"
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0777", SYMLINK+="rs485", OWNER="nvidia", GROUP="nvidia"

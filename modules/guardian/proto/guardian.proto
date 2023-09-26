@@ -1,0 +1,31 @@
+syntax = "proto2";
+package apollo.guardian;
+
+import "modules/common/proto/header.proto";
+import "modules/control/proto/control_cmd.proto";
+
+message GuardianCommand {
+  optional apollo.common.Header header = 1;
+  optional apollo.control.ControlCommand control_command = 2;
+}
+
+message UltrasonicRadarConfig {
+  enum Direction {
+    INVALID = 0;
+    FRONT_LEFT = 1;
+    FRONT_RIGHT = 2;
+    LEFT_FRONT = 3;
+    LEFT_REAR = 4;
+    RIGHT_FRONT = 5;
+    RIGHT_REAR = 6;
+    REAR_LEFT = 7;
+    REAR_RIGHT = 8;
+  }
+  optional Direction direction = 1 [default = INVALID];
+  required uint32 index = 2;
+  optional double distance = 3 [default = 0.0];
+}
+
+message UltrasonicRadarConfigs {
+  repeated UltrasonicRadarConfig config = 1;
+}
